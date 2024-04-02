@@ -20,7 +20,7 @@ LOG = logging.getLogger("mkdocs.plugins." + __name__)
 #       6. Image title (in quotation marks)
 
 AUTOLINK_RE = (
-    r"(?:\!\[\]|\[([^\]]+)\])\((([^)/]+\.(md|png|jpg|jpeg|bmp|gif|svg|webp))(\#[^)]*)*)(\s(\".*\"))*\)"
+    r"(?!.+`+)(?:\!\[\]|\[([^\]]+)\])\((([^)/]+\.(md|png|jpg|jpeg|bmp|gif|svg|webp))(\#[^)]*)*)(\s(\".*\"))*\)"
 )
 
 class AutoLinkReplacer:
